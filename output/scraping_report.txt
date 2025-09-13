@@ -1,0 +1,16 @@
+Hong Kong MSc Admission Data Scraping Report
+==================================================
+
+Total Universities Attempted: 2
+Successful Scrapes: 2
+Total Courses Found: 8
+
+Per-University Results:
+------------------------------
+University of Hong Kong (HKU): SUCCESS (5 courses)
+Chinese University of Hong Kong (CUHK): SUCCESS (3 courses)
+
+Course Statistics:
+--------------------
+University of Hong Kong (HKU): 5 courses
+Chinese University of Hong Kong (CUHK): 3 courses

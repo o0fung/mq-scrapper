@@ -1,0 +1,60 @@
+{
+  "scraping": {
+    "delay_between_requests": 1.0,
+    "request_timeout": 30,
+    "max_retries": 3,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  },
+  "logging": {
+    "level": "INFO",
+    "log_to_file": true,
+    "log_to_console": true
+  },
+  "export": {
+    "output_directory": "output",
+    "formats": ["json", "csv", "excel"],
+    "generate_summary": true
+  },
+  "universities": {
+    "hku": {
+      "enabled": true,
+      "name": "University of Hong Kong (HKU)",
+      "base_url": "https://www.hku.hk"
+    },
+    "cuhk": {
+      "enabled": false,
+      "name": "Chinese University of Hong Kong (CUHK)",
+      "base_url": "https://www.cuhk.edu.hk"
+    },
+    "hkust": {
+      "enabled": false,
+      "name": "Hong Kong University of Science and Technology (HKUST)",
+      "base_url": "https://www.ust.hk"
+    },
+    "cityu": {
+      "enabled": false,
+      "name": "City University of Hong Kong (CityU)",
+      "base_url": "https://www.cityu.edu.hk"
+    },
+    "polyu": {
+      "enabled": false,
+      "name": "Hong Kong Polytechnic University (PolyU)",
+      "base_url": "https://www.polyu.edu.hk"
+    },
+    "hkbu": {
+      "enabled": false,
+      "name": "Hong Kong Baptist University (HKBU)",
+      "base_url": "https://www.hkbu.edu.hk"
+    },
+    "lingnan": {
+      "enabled": false,
+      "name": "Lingnan University",
+      "base_url": "https://www.ln.edu.hk"
+    },
+    "eduhk": {
+      "enabled": false,
+      "name": "Education University of Hong Kong (EdUHK)",
+      "base_url": "https://www.eduhk.hk"
+    }
+  }
+}
