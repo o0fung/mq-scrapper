@@ -21,7 +21,7 @@ low_priority_queue = Queue()
 
 # add the initial URL to the queues
 high_priority_queue.put(target_url)
-low_priority_queue.put(target_url)
+# low_priority_queue.put(target_url)
 
 # define a thread-safe set for visited URLs
 visited_urls = set()
@@ -31,7 +31,7 @@ visited_lock = threading.Lock()
 max_crawl = math.inf
 
 # create a regex pattern for product page URLs
-url_pattern = re.compile(r"/page/\d+/")
+url_pattern = re.compile(r"tpg-admissions/programme-listing$")
 
 # list to store scraped data
 product_data = []
@@ -123,8 +123,6 @@ def crawler():
         if response is None:
             continue  # skip 404 pages
 
-        print(response.content)
-
         # parse the HTML
         soup = get_soup(response)
 
@@ -142,14 +140,16 @@ def crawler():
             else:
                 absolute_url = url
 
+            # print('>>', absolute_url)
+
             with visited_lock:
                 # ensure the crawled link belongs to the target domain and hasn't been visited
                 if absolute_url not in visited_urls:
                     # prioritize product pages 
                     if url_pattern.search(absolute_url):
                         high_priority_queue.put(absolute_url)
-                    else:
-                        low_priority_queue.put(absolute_url)
+                    # else:
+                        # low_priority_queue.put(absolute_url)
 
             # extract content only if the current URL matches the regex page pattern
         if url_pattern.search(current_url):
